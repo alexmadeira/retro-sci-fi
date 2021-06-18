@@ -1,0 +1,367 @@
+:root {
+  --top-bg-color: #240f4a;
+  --botton-bg-color: #e23a6b;
+  --botton-bg-top-river-color: #efa09b;
+  --top-river-color: #ffdfc6;
+  --middle-river-color: #e23a6b;
+  --botton-river-color: #240f4a;
+  --top-sun-color: #fcd84c;
+  --sun-shadow-color: #e23a6b;
+  --boat-color: #df436a;
+  --boat-sail-color: #240f4a;
+}
+
+@keyframes bodyAnimate {
+  0% {
+    height: 1700px;
+  }
+  50% {
+    height: 1675px;
+  }
+  100% {
+    height: 1700px;
+  }
+}
+
+@keyframes boatAnimate {
+  0% {
+    top: 476px;
+  }
+  50% {
+    top: 472px;
+  }
+  100% {
+    top: 476px;
+  }
+}
+@keyframes boatReflectionAnimate {
+  0% {
+    top: 917px;
+  }
+  50% {
+    top: 913px;
+  }
+  100% {
+    top: 917px;
+  }
+}
+
+@keyframes shineAnimate {
+  0% {
+    bottom: 0;
+    height: 25px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+    height: 0px;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes boatFlagAnimate {
+  0% {
+    border-left-width: 20px;
+  }
+
+  40% {
+    border-left-width: 35px;
+  }
+
+  100% {
+    border-left-width: 20px;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    var(--top-bg-color) 10%,
+    var(--botton-bg-color) 30%,
+    var(--botton-bg-color) 52%,
+    var(--top-river-color) 54%,
+    var(--top-river-color) 55%,
+    var(--botton-bg-color) 65%,
+    var(--botton-bg-color) 70%,
+    var(--top-bg-color) 85%
+  );
+  height: 1700px;
+  width: 1200px;
+  margin: 0 auto;
+  animation-name: bodyAnimate;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/*=========== Sun =========== */
+#sunBox {
+  width: 35vw;
+  height: 35vw;
+  position: absolute;
+  top: 80px;
+  background: radial-gradient(
+    circle,
+    var(--sun-shadow-color) 51%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sunReflectionBox {
+  width: 35vw;
+  height: 35vw;
+  position: absolute;
+  top: 1050px;
+  background: radial-gradient(
+    circle,
+    var(--sun-shadow-color) 51%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(180deg);
+  opacity: 0.2;
+}
+
+#sun {
+  content: "";
+  background: linear-gradient(
+    180deg,
+    var(--top-sun-color) 00%,
+    var(--botton-bg-color) 80%
+  );
+  border-radius: 50%;
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sun .shine {
+  background: var(--botton-bg-color);
+  position: absolute;
+  width: 110%;
+  z-index: 1;
+  bottom: 0;
+  animation-name: shineAnimate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#sun .shine1 {
+  animation-delay: 0;
+}
+#sun .shine2 {
+  animation-delay: 0.5s;
+}
+#sun .shine3 {
+  animation-delay: 1s;
+}
+#sun .shine4 {
+  animation-delay: 1.5s;
+}
+#sun .shine5 {
+  animation-delay: 2s;
+}
+#sun .shine6 {
+  animation-delay: 2.5s;
+}
+#sun .shine7 {
+  animation-delay: 3s;
+}
+#sun .shine8 {
+  animation-delay: 3.5s;
+}
+#sun .shine9 {
+  animation-delay: 4s;
+}
+#sun .shine10 {
+  animation-delay: 4.5s;
+}
+#sun .shine11 {
+  animation-delay: 5s;
+}
+
+/*=========== Boat =========== */
+
+#boatBox {
+  height: 200px;
+  width: 200px;
+  top: 476px;
+  transform: translate(0%, 120%);
+  position: absolute;
+  animation-name: boatAnimate;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+#boatReflectionBox {
+  height: 200px;
+  width: 200px;
+  top: 917px;
+  position: absolute;
+  transform: rotateX(180deg);
+  opacity: 0.2;
+  animation-name: boatReflectionAnimate;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+#boat {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  width: 200px;
+  background: var(--boat-color);
+}
+
+#boat #front {
+  position: absolute;
+  overflow: hidden;
+  height: 20px;
+  width: 20px;
+  left: -20px;
+}
+#boat #front::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  border: 10px solid var(--boat-color);
+  left: 0px;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+#boat #front::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -15px;
+  height: 25px;
+  width: 77px;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotate(17deg);
+}
+
+#boat #back {
+  position: absolute;
+  overflow: hidden;
+  height: 20px;
+  width: 20px;
+  right: -20px;
+}
+
+#boat #back::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  border: 10px solid var(--boat-color);
+  left: 0px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+#boat #back::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: -16px;
+  height: 150%;
+  width: 150%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotate(-46deg);
+}
+
+#boat-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#boat-shadow::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -1px;
+  height: 70px;
+  width: 437px;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotate(17deg);
+}
+
+#boatSailBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#boatFrontSail {
+  border: 20px solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: var(--boat-sail-color);
+  border-bottom-color: transparent;
+  border-right-width: 124px;
+  border-top-width: 230px;
+  border-left-width: 0px;
+  border-bottom-width: 0;
+  position: absolute;
+  left: -20px;
+  bottom: 25px;
+}
+#boatBackSail {
+  border: 0px solid var(--boat-sail-color);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-width: 110px;
+  border-top-width: 180px;
+  border-right-width: 0px;
+  border-bottom-width: 0;
+  position: absolute;
+  right: -20px;
+  bottom: 25px;
+}
+
+#boatSailFlag {
+  border: 0px solid var(--boat-sail-color);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-width: 32px;
+  border-top-width: 10px;
+  border-right-width: 0px;
+  border-bottom-width: 0;
+  position: absolute;
+  left: 124px;
+  bottom: 216px;
+  animation-name: boatFlagAnimate;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
