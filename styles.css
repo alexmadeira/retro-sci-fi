@@ -365,3 +365,64 @@ body {
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
 }
+
+@media (max-width: 600px) {
+  @keyframes bodyAnimate {
+    0% {
+      height: 1300px;
+    }
+    50% {
+      height: 1280px;
+    }
+    100% {
+      height: 1300px;
+    }
+  }
+
+  @keyframes boatAnimate {
+    0% {
+      top: 260px;
+    }
+    50% {
+      top: 258px;
+    }
+    100% {
+      top: 260px;
+    }
+  }
+
+  @keyframes boatReflectionAnimate {
+    0% {
+      top: 700px;
+    }
+    50% {
+      top: 698px;
+    }
+    100% {
+      top: 700px;
+    }
+  }
+
+  body {
+    width: 100vw;
+    height: 1300px;
+  }
+
+  #sunBox {
+    width: 350px;
+    height: 350px;
+  }
+
+  #sunReflectionBox {
+    width: 350px;
+    height: 350px;
+    top: 880px;
+  }
+
+  #boatBox {
+    top: 260px;
+  }
+  #boatReflectionBox {
+    top: 700px;
+  }
+}

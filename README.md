@@ -10,7 +10,7 @@ Um projeto que desenvolvi para passar o tempo e me divertir.
 
 ## Preview
 
-[![Exeggutor - Alex Madeira]()]()
+[![Retro Sci Fi - Alex Madeira]()]()
 
 ## Começando
 
