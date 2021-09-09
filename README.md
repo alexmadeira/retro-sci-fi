@@ -1,6 +1,6 @@
-# CSS3 - Sexta-feira Chuvosa
+# CSS3 - Retro sci fi
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c1dbf266-92c5-4f78-b2d9-0bfbee4fd5c5/deploy-status)](https://app.netlify.com/sites/gifted-joliot-1647f8/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f6cceb6a-be50-42e1-8c77-02b03dffe467/deploy-status)](https://app.netlify.com/sites/romantic-noyce-fed1c7/deploys)
 
 ![License MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -10,7 +10,7 @@ Um projeto que desenvolvi para passar o tempo e me divertir.
 
 ## Preview
 
-[![Retro Sci Fi - Alex Madeira]()]()
+[![Retro Sci Fi - Alex Madeira](https://retro-sci-fi.alexmadeira.com.br/preview.gif)](https://retro-sci-fi.alexmadeira.com.br/)
 
 ## Começando
 
